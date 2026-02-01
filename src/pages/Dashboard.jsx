@@ -189,7 +189,7 @@ const balance = totalIncome - totalExpense;
       {txn.type === "income" ? "+" : "-"}₹{txn.amount}
     </p>
 
-    {/* 👇 EDIT BUTTON */}
+    {/*  EDIT BUTTON */}
     <button
       disabled={
         new Date() - new Date(txn.date) > 12 * 60 * 60 * 1000
