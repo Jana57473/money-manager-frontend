@@ -21,6 +21,7 @@ function AddTransactionModal({ isOpen, onClose, onSave }) {
       amount: Number(amount),
       category,
       division,
+      date: new Date().toISOString(),
     };
 
     onSave(transactionData);

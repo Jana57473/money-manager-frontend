@@ -34,9 +34,17 @@ const filteredTransactions = transactions.filter((t) => {
   const txnDate = new Date(t.date);
   const now = new Date();
 
-  if (divisionFilter !== "all" && t.division !== divisionFilter) {
-    return false;
-  }
+  // if (divisionFilter !== "all" && t.division !== divisionFilter) {
+  //   return false;
+  // }
+
+  if (
+  divisionFilter !== "all" &&
+  t.division?.toLowerCase() !== divisionFilter.toLowerCase()
+) {
+  return false;
+}
+
 
   if (fromDate && txnDate < new Date(fromDate)) {
     return false;
